@@ -2,6 +2,7 @@ import * as React from "react";
 import { NavigationItem } from "./NavigationItem";
 import { FriendCard } from "./FriendCard";
 import { FriendType, NavigationItemProps } from "./types";
+import { useRouter } from "next/navigation";
 
 interface SidebarProps {
   className?: string;
@@ -9,6 +10,17 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, navigationItems: navItems }) => {
+  const router = useRouter();
+  
+  const handleNavigation = (label: string) => {
+    if (label.toLowerCase() === 'inbox') {
+      router.push('/inbox');
+    } else if (label.toLowerCase() === 'dashboard') {
+      router.push('/');
+    }
+    // Add other navigation cases as needed
+  };
+
   const friends: FriendType[] = [
     {
       name: "Prashant",
@@ -54,6 +66,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, navigationItems: na
                 icon={<div />}
                 label={item.label}
                 isActive={item.isActive}
+                onClick={() => handleNavigation(item.label)}
               />
             ))}
           </div>

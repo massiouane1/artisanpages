@@ -12,7 +12,7 @@ export default function Home() {
   const navigationItems: NavigationItemProps[] = [
     { label: "Dashboard", icon: "dashboard" },
     { label: "Projects", icon: "projects" },
-    { label: "Messages", icon: "messages" },
+    { label: "inbox", icon: "inbox" },
     { label: "Settings", icon: "settings" },
   ];
 

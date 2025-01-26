@@ -3,6 +3,8 @@ export interface NavigationItemProps {
   label: string;
   isActive?: boolean;
   className?: string;
+  href?: string;
+  onClick?: () => void;
 }
 
 export interface FriendType {
