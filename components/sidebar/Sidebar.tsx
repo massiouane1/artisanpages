@@ -17,6 +17,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, navigationItems: na
       router.push('/inbox');
     } else if (label.toLowerCase() === 'dashboard') {
       router.push('/');
+    } else if (label.toLowerCase() === 'projects') {
+      router.push('/projects');
     }
     // Add other navigation cases as needed
   };

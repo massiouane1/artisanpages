@@ -10,10 +10,10 @@ import React from "react";
 
 export default function Home() {
   const navigationItems: NavigationItemProps[] = [
-    { label: "Dashboard", icon: "dashboard" },
-    { label: "Projects", icon: "projects" },
-    { label: "inbox", icon: "inbox" },
-    { label: "Settings", icon: "settings" },
+    { label: "Dashboard", icon: "dashboard", href: "/" },
+    { label: "Projects", icon: "projects", href: "/projects" },
+    { label: "inbox", icon: "inbox", href: "/inbox" },
+    { label: "Settings", icon: "settings", href: "/settings" },
   ];
 
   return (

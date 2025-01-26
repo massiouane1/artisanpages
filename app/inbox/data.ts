@@ -9,7 +9,9 @@ export const inboxMessages: MessageProps[] = [
     tags: [
       { text: "Project", variant: "primary" },
       { text: "Work", variant: "secondary" }
-    ]
+    ],
+    lastMessage: '',
+    hasUnread: false
   },
   {
     sender: "William Smith",
@@ -19,7 +21,9 @@ export const inboxMessages: MessageProps[] = [
     tags: [
       { text: "Meeting", variant: "primary" },
       { text: "Work", variant: "secondary" }
-    ]
+    ],
+    lastMessage: '',
+    hasUnread: false
   },
   {
     sender: "Bob Johnson",
@@ -28,8 +32,10 @@ export const inboxMessages: MessageProps[] = [
     content: "Any plans for the weekend? I was thinking of going hiking in the nearby mountains. It's been a while since we had some outdoor fun.",
     tags: [
       { text: "Weekend", variant: "primary" },
-      { text: "Work", variant: "outline" }
-    ]
+      { text: "Work", variant: "tertiary" }
+    ],
+    lastMessage: '',
+    hasUnread: false
   },
   {
     sender: "Emily Davis",
@@ -39,9 +45,10 @@ export const inboxMessages: MessageProps[] = [
     tags: [
       { text: "Budget", variant: "primary" },
       { text: "About", variant: "secondary" },
-      { text: "Work", variant: "outline" }
+      { text: "Work", variant: "tertiary" }
     ],
-    hasUnread: true
+    hasUnread: true,
+    lastMessage: ''
   }
 ];
 
