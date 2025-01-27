@@ -78,3 +78,23 @@ export const chatMessages: ChatMessageProps[] = [
     isUser: true
   }
 ];
+
+export const initialConversations = {
+  "Alice Smith": [
+    {
+      sender: "Alice Smith",
+      message: "Hi! I wanted to discuss the project updates.",
+      time: "10:00",
+      isUser: false
+    }
+  ],
+  "William Smith": [
+    {
+      sender: "William Smith",
+      message: "Let's schedule a meeting for tomorrow.",
+      time: "09:30",
+      isUser: false
+    }
+  ],
+  // Add more initial conversations as needed
+};

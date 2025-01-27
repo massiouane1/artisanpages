@@ -1,7 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import { StatCard } from "./StatCard";
 import { ProjectCard } from "./ProjectCard";
 import { WorkingProject } from "./WorkingProject";
+import { createJob } from '../../api/jobs';
+import { CreateJobForm, JobFormData } from './CreateJobForm';
 
 interface DashboardProps {
   children?: ReactNode;
@@ -9,6 +11,8 @@ interface DashboardProps {
 }
 
 export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => {
+  const [showCreateJob, setShowCreateJob] = useState(false);
+
   const stats = [
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/d2ed01579701b128cb886f6693a6b968b64e1c377d511593a9a65cbedea7ddef?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
@@ -72,8 +76,24 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
     },
   ];
 
+  const handleCreateJob = async (jobData: JobFormData) => {
+    try {
+      const response = await createJob(jobData);
+      console.log('Job created successfully:', response);
+      setShowCreateJob(false);
+      // Optionally refresh the jobs list or show a success message
+    } catch (error) {
+      console.error('Error creating job:', error);
+      // Handle error (show error message to user)
+    }
+  };
+
   return (
     <div className={`flex flex-col self-stretch my-auto w-full max-md:mt-10 max-md:max-w-full ${className}`}>
+      <div className="flex justify-between items-center mb-6">
+        <div className="text-2xl font-bold">Dashboard</div>
+      </div>
+
       <div className="flex flex-col px-1.5 w-full max-md:max-w-full">
         <form className="flex flex-wrap gap-4 w-full text-xs font-medium max-md:max-w-full">
           <div className="flex flex-auto gap-3 justify-center items-start min-h-[49px] text-neutral-400">
@@ -120,12 +140,18 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
             </div>
           ))}
           <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1eb0dfb36005292ab5f498df73cb249be4cae00b3535d7121c12cd1671a8883?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa"
-              alt=""
-              className="object-contain shrink-0 mt-3 max-w-full rounded-3xl aspect-[0.86] w-[193px] max-md:mt-10"
-            />
+            {/* Replace the image with Create New Job button */}
+            <div className="flex items-center justify-center h-full">
+              <button
+                onClick={() => {
+                  console.log('Button clicked');
+                  setShowCreateJob(true);
+                }}
+                className="px-6 py-3 text-white bg-teal-500 rounded-lg hover:bg-teal-600 transition-colors"
+              >
+                Create New Job
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -154,6 +180,14 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
           ))}
         </div>
       </div>
+      {showCreateJob && (
+        <div className="fixed inset-0 z-50">
+          <CreateJobForm
+            onClose={() => setShowCreateJob(false)}
+            onSubmit={handleCreateJob}
+          />
+        </div>
+      )}
       {children}
     </div>
   );

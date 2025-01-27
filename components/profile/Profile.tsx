@@ -11,6 +11,7 @@ interface ProfileProps {
 export const Profile: React.FC<ProfileProps> = ({ className }) => {
   const projects: ProjectCardProps[] = [
     {
+      id: "1",
       avatarSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
       name: "Ahmed iyad hamoudi",
@@ -19,6 +20,7 @@ export const Profile: React.FC<ProfileProps> = ({ className }) => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a641fdfca04966da0db10918f0c6c01a470498f3b4c6803910caa73ba3a5091a?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     },
     {
+      id: "2",
       avatarSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
       name: "Ahmed iyad hamoudi",
@@ -27,6 +29,7 @@ export const Profile: React.FC<ProfileProps> = ({ className }) => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a641fdfca04966da0db10918f0c6c01a470498f3b4c6803910caa73ba3a5091a?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     },
     {
+      id: "3",
       avatarSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
       name: "Ahmed iyad hamoudi",
@@ -35,6 +38,7 @@ export const Profile: React.FC<ProfileProps> = ({ className }) => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a641fdfca04966da0db10918f0c6c01a470498f3b4c6803910caa73ba3a5091a?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     },
     {
+      id: "4",
       avatarSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
       name: "Ahmed iyad hamoudi",
@@ -43,6 +47,7 @@ export const Profile: React.FC<ProfileProps> = ({ className }) => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a641fdfca04966da0db10918f0c6c01a470498f3b4c6803910caa73ba3a5091a?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     },
     {
+      id: "5",
       avatarSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
       name: "Ahmed iyad hamoudi",

@@ -65,6 +65,11 @@
     --ring: 240 4.9% 83.9%;
   }
 }
+@layer utilities {
+  .bg-gradient-blur {
+    backdrop-filter: blur(12px);
+  }
+}
 
 @layer base {
   * {

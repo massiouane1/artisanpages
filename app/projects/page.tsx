@@ -4,9 +4,12 @@ import { NavigationItemProps } from "@/components/sidebar/types";
 import * as React from "react";
 import { SearchBar } from "./SearchBar";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectsList } from '@/components/profile/ProjectsList';
+import { ProjectCardProps } from "@/components/profile/types";
 
 const projectsData = [
   {
+    id: "1", // Add ID
     imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/e9dfae6b3f6ba14c2b0114bbebf6bb07a8ca3483ed04f149ef6db8d91ab769d1?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     deadline: "23/01/2025",
     price: "20000",
@@ -17,6 +20,7 @@ const projectsData = [
     showProjectButton: true
   },
   {
+    id: "2", // Add ID
     imageUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/e9dfae6b3f6ba14c2b0114bbebf6bb07a8ca3483ed04f149ef6db8d91ab769d1?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     deadline: "23/01/2025",
     price: "20000",
@@ -36,6 +40,9 @@ export default function ProjectsPage() {
   const handleSearch = (query: string) => {
     console.log('Search query:', query);
   };
+
+  // TODO: Fetch all projects
+  const allProjects: ProjectCardProps[] = []; // Replace with actual data fetching
 
   return (
     <main>
@@ -60,6 +67,10 @@ export default function ProjectsPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="max-w-4xl mx-auto p-6">
+        <h1 className="text-2xl font-bold mb-6">All Projects</h1>
+        <ProjectsList projects={allProjects} />
       </div>
     </main>
   );

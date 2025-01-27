@@ -12,7 +12,7 @@ const MessageCard: React.FC<MessageProps> = ({
   isOnline
 }) => {
   return (
-    <div className="flex items-start p-4 w-full hover:bg-zinc-50 cursor-pointer rounded-lg border border-solid border-zinc-200">
+    <div className="flex items-start p-4 w-full hover:bg-zinc-50 cursor-pointer rounded-lg border border-solid border-zinc-200 hover:bg-zinc-100 active:bg-zinc-200">
       <div className="relative mr-3">
         <div className="flex justify-center items-center bg-zinc-100 h-[48px] w-[48px] rounded-full">
           {avatar ? (

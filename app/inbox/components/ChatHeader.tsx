@@ -1,28 +1,31 @@
 import React from 'react';
+import { ChatHeaderProps } from '../types';
 
-type ChatHeaderProps = {
-  name: string;
-  status: 'online' | 'offline';
-  avatar?: string;
-};
-
-export const ChatHeader: React.FC<ChatHeaderProps> = ({ name, status, avatar }) => (
-  <div className="flex gap-4 items-center p-4 border-b border-zinc-200">
-    <div className="relative">
-      <div className="flex justify-center items-center bg-zinc-100 h-[42px] w-[42px] rounded-full">
-        {avatar ? (
-          <img src={avatar} alt="" className="w-full h-full rounded-full object-cover" />
-        ) : (
-          <span className="text-lg text-zinc-500">{name[0]}</span>
-        )}
+export const ChatHeader: React.FC<ChatHeaderProps> = ({ name, status, avatar, lastSeen }) => {
+  return (
+    <div className="flex items-center justify-between p-4 border-b border-zinc-200">
+      <div className="flex items-center gap-3">
+        <div className="relative">
+          <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover" />
+          <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white
+            ${status === 'online' ? 'bg-green-500' : 
+              status === 'away' ? 'bg-yellow-500' : 'bg-gray-500'}`} 
+          />
+        </div>
+        <div>
+          <h3 className="font-medium text-gray-900">{name}</h3>
+          <p className="text-sm text-gray-500">
+            {status === 'online' ? 'Online' : lastSeen ? `Last seen ${lastSeen}` : 'Offline'}
+          </p>
+        </div>
       </div>
-      <div className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${
-        status === 'online' ? 'bg-green-500' : 'bg-zinc-300'
-      }`} />
+      <div className="flex gap-2">
+        <button className="p-2 hover:bg-zinc-100 rounded-full">
+          <svg className="w-5 h-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h18M3 12h18M3 19h18" />
+          </svg>
+        </button>
+      </div>
     </div>
-    <div className="flex flex-col">
-      <div className="text-sm font-semibold text-zinc-900">{name}</div>
-      <div className="text-xs text-zinc-500">{status}</div>
-    </div>
-  </div>
-);
+  );
+};

@@ -20,4 +20,16 @@ export interface ChatMessageProps {
   time: string;
   isUser: boolean;
   status?: 'sent' | 'delivered' | 'read';
+  attachments?: Array<{
+    type: 'image' | 'file';
+    url: string;
+    name?: string;
+  }>;
+}
+
+export interface ChatHeaderProps {
+  name: string;
+  status: 'online' | 'offline' | 'away';
+  avatar: string;
+  lastSeen?: string;
 }
