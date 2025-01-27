@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { CreateJobDto, JobAttachment } from '@/types/job';
 import { useRouter } from 'next/navigation';
