@@ -25,19 +25,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, navigationItems: na
 
   const friends: FriendType[] = [
     {
-      name: "Prashant",
+      name: "ahmed c",
       role: "software Developer",
       imageUrl:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/5799866e41e7931f25fe0302f7c23056d9d626630aab4c4561b520b2e8f16fb2?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     },
     {
-      name: "Prashant",
+      name: "ahmed c",
       role: "software Developer",
       imageUrl:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/5799866e41e7931f25fe0302f7c23056d9d626630aab4c4561b520b2e8f16fb2?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
     },
     {
-      name: "Prashant",
+      name: "ahmed c",
       role: "software Developer",
       imageUrl:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/5799866e41e7931f25fe0302f7c23056d9d626630aab4c4561b520b2e8f16fb2?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",

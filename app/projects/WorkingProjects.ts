@@ -9,7 +9,7 @@ const projectsData = [
     price: "20000",
     title: "I can draw the table you want",
     description: "Une font avec empattement est une font dont les traits les plus longs sont terminés par de petits traits ou des extensions. Les empattements trouvent leur origine dans les anciennes capitales romaines carrées et leur usage s'est répandu avec l'avènement de l'imprimerie. Elles sont souvent utilisées dans les livres, les magazines et les journaux, car les fonts à empattement sont considérées comme plus faciles à lire dans les cas d'utilisation de longue durée. Parmi",
-    clientName: "Prashant Kumar singh",
+    clientName: "ahmed c",
     clientId: "Client id",
     showProjectButton: true
   },

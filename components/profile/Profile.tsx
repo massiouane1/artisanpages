@@ -100,7 +100,7 @@ export const Profile: React.FC<ProfileProps> = ({ className }) => {
         </div>
         <div className="flex flex-col self-stretch mt-4 w-full font-medium text-center">
           <div className="text-base text-neutral-800">
-            Good Morning Prashant
+            Good Morning ahmed 
           </div>
           <div className="mt-1.5 text-xs text-zinc-500">
             Continue your journey and achieve your target

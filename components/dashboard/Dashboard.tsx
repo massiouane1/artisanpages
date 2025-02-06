@@ -42,7 +42,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
       title: "I can draw the table you want",
       authorImage:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
-      authorName: "Prashant Kumar singh",
+      authorName: "ahmed c",
       authorRole: "software Developer",
     },
     {
@@ -52,7 +52,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
       title: "I can draw the table you want",
       authorImage:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
-      authorName: "Prashant Kumar singh",
+      authorName: "ahmed c",
       authorRole: "software Developer",
     },
   ];
@@ -61,7 +61,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
     {
       authorImage:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/36948c38dce95657f4e9147f48c52721fdee52eab1c811a30ef43d0f139045e1?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
-      authorName: "Prashant Kumar Singh",
+      authorName: "ahmed c",
       date: "25/2/2023",
       jobType: "Drawing",
       jobTitle: "Understanding Concept of React",
@@ -69,7 +69,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ children, className }) => 
     {
       authorImage:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a577addaf716828ac5ccdea2026ef01505c9fa2e9f0d754f3203299389bdb85c?placeholderIfAbsent=true&apiKey=c6cfe9ae438049c2b334108edb3082aa",
-      authorName: "ravi Kumar",
+      authorName: "ahmed z",
       date: "25/2/2023",
       jobType: "Writing",
       jobTitle: "Understanding Concept of React",
